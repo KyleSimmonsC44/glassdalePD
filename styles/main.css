@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+/* @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500&family=Alegreya+Sans+SC:wght@300&display=swap');
 
 /*Typography
 --------------------------------------------------------------*/
@@ -8,39 +8,54 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: "Comfortaa", Arial, sans-serif;
+	font-family:  sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Patua One", serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
   letter-spacing: 2px;
 }
-.criminal-style{
+ .criminal-style{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	border: 2px inset black;
 	box-shadow: 0px 6px 13px 1px rgba(0,0,0,4);
+	background: radial-gradient(dimgray  0%, black 110%);
 	justify-content: center;
 	margin: 1%;
 	flex-basis: 20%;
 	text-align: center;
-	animation-name: fade-in;
-	animation-duration: 3s;
+	/* animation-name: fade-in;
+	animation-duration: 3s; */
+	color:whitesmoke;
+	border-radius: 10%; 
+
+} 
+ .criminal__conviction::first-line{
+	text-transform: capitalize;
 }
-.criminalsContainer{
+ .criminalsContainer{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-}
+} 
 
-.criminal-style:hover{
+/* .criminal-style:hover{
 	transition: .3s;
 	box-shadow: 0px 6px 13px 1px rgba(0,0,0,4), 0px 20px 28px 12px rgba(0, 0, 0, 0.19);
-}
+	background: radial-gradient(dimgray 25%, black 100%);
+	animation-name: fade-in;
+	animation-duration: 3s;
+} */
+
 @keyframes fade-in {
 	from {opacity:0%;}
 	to {opacity:100%;}
   }
+
+  body{
+	  background-color: dimgray;
+  } 
