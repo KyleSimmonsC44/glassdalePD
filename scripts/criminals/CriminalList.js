@@ -1,6 +1,7 @@
 import {getCriminals, useCriminals} from './CriminalDataProvider.js'
 import {criminalHTML} from './Criminal.js'
 import { useConviction } from '../convictions/ConvictionDataProvider.js'
+import {useOfficers} from '../officers/OfficerProvider.js'
 
 
 export const CriminalFinalHTML = () =>{
@@ -50,3 +51,25 @@ const render = (criminalArray) =>{
         contentElement.innerHTML =
         `${criminalHtmlRep}`
     } }
+
+    eventHub.addEventListener("officerSelected", event => {
+        // console.log("crimeSelected event happened", event.detail.crimeThatWasChosen)
+        if (event.detail.officerThatWasChosen !== "0"){
+    
+            const criminalArray = useCriminals()
+            const officersArray = useOfficers()
+            const officerThatWasChosen = officersArray.find(officerObj =>{
+                return officerObj.id === parseInt(event.detail.officerThatWasChosen)
+                
+            })
+            const filteredCriminalsArray = criminalArray.filter( criminalObj =>{
+                return criminalObj.arrestingOfficer === officerThatWasChosen.name
+            })
+            console.log("filteredCriminalsArray", filteredCriminalsArray)
+            
+            render(filteredCriminalsArray)
+        } else{
+            const criminalArray = useCriminals()
+            render(criminalArray)
+        }
+    })
