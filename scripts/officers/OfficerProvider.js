@@ -9,7 +9,7 @@ export const getOfficers = () => {
         .then(response => response.json())
         .then(
             parsedOfficers => {
-                console.table(parsedOfficers)
+                // http://192.168.1.64:5000
                 officers = parsedOfficers
             }
         )

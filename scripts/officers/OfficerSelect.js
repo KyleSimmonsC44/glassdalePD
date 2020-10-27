@@ -5,7 +5,7 @@ const contentElement = document.querySelector(".filters__officer")
 
 // On the event hub, listen for a "change" event.
 eventHub.addEventListener("change", (event) => {
-
+console.log(event)
     // Only do this if the `crimeSelect` element was changed
     if (event.target.id === "officerSelect") {
         // Create custom event. Provide an appropriate name.
@@ -39,7 +39,7 @@ const render = officersCollection =>{
             officerObj =>{
                 return `<option value="${officerObj.id}">${officerObj.name}</option>`
             }
-        )
+            ).join("") 
     }
     </select>
    ` 

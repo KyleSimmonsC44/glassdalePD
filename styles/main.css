@@ -31,7 +31,8 @@ h1,h2,h3,h4,h5,h6 {
 	/* animation-name: fade-in;
 	animation-duration: 3s; */
 	color:whitesmoke;
-	border-radius: 10%; 
+	border-radius: 5%;
+	min-width: 300px;
 
 } 
  .criminal__conviction::first-line{
@@ -59,3 +60,28 @@ h1,h2,h3,h4,h5,h6 {
   body{
 	  background-color: dimgray;
   } 
+  .filters{
+	  display: flex;
+	  justify-content: space-evenly;
+  }
+
+  .associate{
+	max-width: 50%;
+	margin-left: 25%;
+	margin-bottom: 2%;
+	background-color: transparent;
+	color: white;
+	border: 2px inset black;
+  }
+
+  .alibi__list::first-line{
+	text-transform: capitalize;
+}
+.investigation{
+	display: flex;
+}
+.noteFormContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

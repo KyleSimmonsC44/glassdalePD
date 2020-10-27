@@ -15,7 +15,7 @@ eventHub.addEventListener("change", (event) => {
                 crimeThatWasChosen: event.target.value
             }
         })
-        console.log(customEvent.detail.crimeThatWasChosen)
+        
         // Dispatch to event hub
         eventHub.dispatchEvent(customEvent)
     }

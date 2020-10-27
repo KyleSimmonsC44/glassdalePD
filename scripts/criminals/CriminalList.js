@@ -7,9 +7,7 @@ import {useOfficers} from '../officers/OfficerProvider.js'
 export const CriminalFinalHTML = () =>{
         // how do we get data?
     getCriminals().then(()=>{
-        // where do we want to add the html?
-        const contentElement = document.querySelector(".criminalsContainer")
-        // we need to add the data now, to start we have to assign it to a variable
+ 
         const criminalArray = useCriminals()
         
         render(criminalArray)
@@ -73,3 +71,8 @@ const render = (criminalArray) =>{
             render(criminalArray)
         }
     })
+
+
+        eventHub.addEventListener("criminalDOM", event => {
+            CriminalFinalHTML()
+        })
