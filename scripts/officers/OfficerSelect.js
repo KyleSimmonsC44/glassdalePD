@@ -5,7 +5,6 @@ const contentElement = document.querySelector(".filters__officer")
 
 // On the event hub, listen for a "change" event.
 eventHub.addEventListener("change", (event) => {
-console.log(event)
     // Only do this if the `crimeSelect` element was changed
     if (event.target.id === "officerSelect") {
         // Create custom event. Provide an appropriate name.
@@ -14,7 +13,6 @@ console.log(event)
                 officerThatWasChosen: event.target.value
             }
         })
-        console.log(customEvent.detail.officerThatWasChosen)
         // Dispatch to event hub
         eventHub.dispatchEvent(customEvent)
     }

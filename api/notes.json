@@ -1,16 +1,12 @@
 {
   "notes": [
     {
-      "blah": "Blah",
+      "dateOfInterview": "2020-11-05",
+      "timestamp": 1604611252397,
+      "author": "Kyle",
+      "criminalId": 17,
+      "note": "does this work",
       "id": 1
-    },
-    {
-      "dateOfInterview": "2020-10-22",
-      "timestamp": 1603398715566,
-      "author": "kyle",
-      "suspect": "kyle",
-      "note": "fbfbsa",
-      "id": 2
     }
   ]
 }

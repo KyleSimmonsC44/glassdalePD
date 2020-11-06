@@ -21,6 +21,6 @@ eventHub.addEventListener("click", (event) => {
               
             })
             eventHub.dispatchEvent(customEvent)
+            console.log("Witness Button Pushed")
         }
-        console.log("Witness Button Pushed")
     })
