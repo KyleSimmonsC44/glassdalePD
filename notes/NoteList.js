@@ -1,7 +1,7 @@
 import { getNotes, useNotes } from "./NoteDataProvider.js";
 import {Note} from './Note.js'
 import {useCriminals, getCriminals} from "../scripts/criminals/CriminalDataProvider.js"
-
+import {deleteNote} from './NoteDataProvider.js'
 const eventHub = document.querySelector(".container")
 
 
@@ -41,7 +41,24 @@ const render = (noteCollection, criminalCollection) => {
                 <p>Date: ${new Date(note.timestamp).toLocaleDateString('en-US')}</p>
                 <p>Time: ${new Date(note.timestamp).toLocaleTimeString('en-US')}</p>
                 <p>Note: ${note.note}</p>
+                <div class="delete">
+                <button class="deleteButton" id="deleteNote--${note.id}">Delete</button>
+                </div>
             </section>
         `
     })
 }
+
+eventHub.addEventListener("click", event =>{
+    if (event.target.id.startsWith("deleteNote--")){
+        const [prefix, id] = event.target.id.split("--")
+
+        deleteNote(id).then(
+            () =>{
+                const updatedNotes = useNotes()
+                const criminals = useCriminals()
+                render(updatedNotes, criminals)
+            }
+        )
+    }
+})

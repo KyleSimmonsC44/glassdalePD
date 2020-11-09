@@ -1,12 +1,3 @@
 {
-  "notes": [
-    {
-      "dateOfInterview": "2020-11-05",
-      "timestamp": 1604611252397,
-      "author": "Kyle",
-      "criminalId": 17,
-      "note": "does this work",
-      "id": 1
-    }
-  ]
+  "notes": []
 }
