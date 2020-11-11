@@ -10,6 +10,8 @@ import { AlibiEventListener } from './criminals/AlibiList.js'
 import { WitnessSelect } from './witnesses/WitnessSelect.js'
 import { WitnessEventListener } from './witnesses/WitnessList.js'
 import {CriminalSelect} from './criminals/CriminalSelect.js'
+import { FacilitySelect } from './facility/FacilityButton.js'
+import { FacilityEventListener } from './facility/FacilityList.js'
 
 OfficerSelect()
 NoteList()
@@ -18,3 +20,5 @@ AlibiEventListener()
 WitnessSelect()
 WitnessEventListener()
 CriminalSelect()
+FacilitySelect()
+FacilityEventListener()
